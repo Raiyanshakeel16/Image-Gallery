@@ -1,3 +1,48 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #ffffff;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px;
+  background-color:#483939;
+  color: #ffffff;
+  border-bottom: 5px solid red;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 340px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.gallery::after {
+  content: "";
+  display: block;
+  height: 0;
+}
